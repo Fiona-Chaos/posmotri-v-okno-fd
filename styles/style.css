@@ -88,18 +88,16 @@ ol {
   gap: 30px;
 }
 
-.content__list-item {
-  column-gap: 30px;
-  padding-right: 1px;
-  row-gap: 30px;
-}
-
 .content__list-container {
   position: relative;
   height: 298px;
   overflow-y: auto;
   margin-top: 24px;
 } 
+
+.content__list-container:has(.preloader) {
+  overflow: hidden;
+}
 
 .content__card-link {
   display: block;
@@ -110,6 +108,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .content__card-link:active, 
@@ -129,24 +128,6 @@ ol {
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  padding: 2px;
-}
-
-.content__video-card:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__video-card:focus {
-  outline: none;
-}
-
-.content__video-card:focus-visible {
-  outline: 1px solid #fff;
 }
 
 .content__video-card-title {
@@ -159,10 +140,12 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
   color: rgba(217, 217, 217, 1);
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -192,6 +175,7 @@ ol {
   height: 386px;
   width: 711px;
   margin-block-end: 20px;
+  position: relative;
 }
 
 .result__video {
@@ -204,7 +188,6 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-bottom: 3px;
 }
 
 .search-form__textfield {
@@ -237,6 +220,7 @@ ol {
   border: none;
   min-width: 212px;
   margin-top: auto;
+  margin-left: 1px;
 }
 
 .search-form__fieldset-title {
@@ -245,7 +229,7 @@ ol {
   font-size: 18px;
   line-height: 100%;
   color: #fff;
-  padding-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 input[type="text"] {
@@ -307,7 +291,6 @@ input[type="text"]:focus-visible {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 4px;
   gap: 15px;
   font-size: 18px;
 }
@@ -335,8 +318,6 @@ input[type="text"]:focus-visible {
 }
 
 .search-form__label-text {
-  margin-top: 5px;
-  margin-left: 5px;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -366,7 +347,7 @@ input[type="text"]:focus-visible {
 }
 
 .button {
-  font-family: Oswald, sans-serif;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -380,7 +361,6 @@ input[type="text"]:focus-visible {
 }
 
 .more-button {
-  min-height: 34px;
   margin-right: 2px;
   margin-bottom: 2px;
   margin-left: 2px;
@@ -391,6 +371,7 @@ input[type="text"]:focus-visible {
 .button:hover {
   text-decoration: underline;
   text-underline-position: under;
+  cursor: pointer;
 }
 
 .button:active {
